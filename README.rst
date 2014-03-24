@@ -68,5 +68,8 @@ Usage
             password = PasswordField(label="Password", validate_url=reverse_lazy('password_validator'))
 
     Нужно ещё добавить validate_url чтобы он резолвился с остальными урлами:::
-    # urls.py base file
-    url(r'^your_any_url/', include('passwords.urls')),
+    
+        # urls.py base file
+        urlpatterns = patterns('',
+        url(r'^your_any_url/', include('passwords.urls')),
+        )
