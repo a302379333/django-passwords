@@ -67,6 +67,14 @@ Usage
         class ExampleForm(forms.Form):
             password = PasswordField(label="Password", validate_url=reverse_lazy('password_validator'))
 
+<<<<<<< HEAD
     Нужно ещё добавить validate_url чтобы он резолвился с остальными урлами:
     # urls.py base file
-    url(r'^your_any_url/', include('passwords.urls')),
+=======
+    Нужно ещё добавить validate_url чтобы он резолвился с остальными урлами:::
+    
+        # urls.py base file
+        urlpatterns = patterns('',
+        url(r'^your_any_url/', include('passwords.urls')),
+        )
+>>>>>>> fffa1105d36ec7d409b62b3eef5d677020b44d3c

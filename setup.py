@@ -12,7 +12,11 @@ setup(
     packages = [
         "passwords",
     ],
+<<<<<<< HEAD
     package_data = {'passwords': ['static/passwords/passwords.coffee',
+=======
+    package_data = {'passwords': ['static/passwords/passwords.coffee', 
+>>>>>>> fffa1105d36ec7d409b62b3eef5d677020b44d3c
                                     'static/passwords/passwords.js',
                                     'static/passwords/passwords.css']},
     classifiers = [
