@@ -10,15 +10,15 @@ Installation
 You can install django-passwords with pip by typing::
 
     pip install django-passwords
-    
+
 Or with easy_install by typing::
 
     easy_install django-passwords
-    
+
 Or manually by downloading a tarball and typing::
 
     python setup.py install
-    
+
 Settings
 --------
 
@@ -65,4 +65,8 @@ Usage
         from passwords.fields import PasswordField
 
         class ExampleForm(forms.Form):
-            password = PasswordField(label="Password")
+            password = PasswordField(label="Password", validate_url=reverse_lazy('password_validator'))
+
+    Нужно ещё добавить validate_url чтобы он резолвился с остальными урлами:
+    # urls.py base file
+    url(r'^your_any_url/', include('passwords.urls')),

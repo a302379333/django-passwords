@@ -12,6 +12,9 @@ setup(
     packages = [
         "passwords",
     ],
+    package_data = {'passwords': ['static/passwords/passwords.coffee',
+                                    'static/passwords/passwords.js',
+                                    'static/passwords/passwords.css']},
     classifiers = [
         "Development Status :: 4 - Beta",
         "Environment :: Web Environment",
