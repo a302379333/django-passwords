@@ -12,6 +12,7 @@ setup(
     packages = [
         "passwords",
     ],
+    data_files = [('passwords', glob('static/*'))],
     include_package_data=True,
     classifiers = [
         "Development Status :: 4 - Beta",
