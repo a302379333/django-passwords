@@ -12,7 +12,6 @@ setup(
     packages = [
         "passwords",
     ],
-    package_data = {'passwords': ['static/passwords/passwords.coffee',
     package_data = {'passwords': ['static/passwords/passwords.coffee', 
                                     'static/passwords/passwords.js',
                                     'static/passwords/passwords.css']},
