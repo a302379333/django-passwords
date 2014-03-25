@@ -28,7 +28,7 @@ PASSWORD_COMMON_SEQUENCES =  getattr(settings, "PASSWORD_COMMON_SEQUENCES", COMM
 PASSWORD_COMPLEXITY = getattr(settings, "PASSWORD_COMPLEXITY", None)
 
 class LengthValidator(object):
-    message = _(u"Слишком короткий пароль (%s)")
+    message = _(u"Неверная длина (%s)")
     code = "length"
 
     def __init__(self, min_length=None, max_length=None):
