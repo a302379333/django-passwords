@@ -15,7 +15,6 @@ setup(
     package_data = {'passwords': ['static/passwords/passwords.coffee', 
                                     'static/passwords/passwords.js',
                                     'static/passwords/passwords.css']}
-    include_package_data=True,
     classifiers = [
         "Development Status :: 4 - Beta",
         "Environment :: Web Environment",
