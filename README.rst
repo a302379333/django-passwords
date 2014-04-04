@@ -70,6 +70,7 @@ Usage
 <<<<<<< HEAD
     Нужно ещё добавить validate_url чтобы он резолвился с остальными урлами:
     # urls.py base file
+    url(r'^your_any_url/', include('passwords.urls')),
 =======
     Нужно ещё добавить validate_url чтобы он резолвился с остальными урлами:::
     
@@ -77,4 +78,8 @@ Usage
         urlpatterns = patterns('',
         url(r'^your_any_url/', include('passwords.urls')),
         )
+>>>>>>>>>>>>>>>>>>>> File 1
 >>>>>>> fffa1105d36ec7d409b62b3eef5d677020b44d3c
+>>>>>>>>>>>>>>>>>>>> File 2
+>>>>>>> fffa1105d36ec7d409b62b3eef5d677020b44d3c
+>>>>>>>>>>>>>>>>>>>> File %d
