@@ -8,6 +8,7 @@
       return $.post(window.password_validator_url, {
         password: $(this).val()
       }, function(response) {
+        $(this).closest('p.help-block').remove();
         return $('.status_bar').html(render_bar(response));
       });
     });
