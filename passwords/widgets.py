@@ -19,7 +19,7 @@ class PasswordFieldWidget(PasswordInput):
         if not self.render_value:
             value = None
         if self.validate_url:
-            data_render = """<div class="status_bar"><div class="progress password "><div class="bar" style="width: 0%;"></div></div></div>
+            data_render = u"""<div class="status_bar"><div class="progress password "><div class="bar" style="width: 0%;"></div></div></div>
                             <p class="help-block">{message}</p>
             <script type="text/javascript">//global var for password validation url
                 window.password_validator_url = '{url}';
