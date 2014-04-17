@@ -14,7 +14,11 @@ setup(
     ],
     package_data = {'passwords': ['static/passwords/passwords.coffee',
                                     'static/passwords/passwords.js',
-                                    'static/passwords/passwords.css']},
+                                    'static/passwords/passwords.css',
+                                    'locale/en/LC_MESSAGES/django.mo',
+                                    'locale/en/LC_MESSAGES/django.po',
+                                    'locale/ru/LC_MESSAGES/django.mo',
+                                    'locale/ru/LC_MESSAGES/django.po',]},
     classifiers = [
         "Development Status :: 4 - Beta",
         "Environment :: Web Environment",
