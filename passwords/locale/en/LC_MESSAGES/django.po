@@ -39,27 +39,27 @@ msgstr "Be more complicated (%s)"
 
 
 msgid "должен содержать %(UPPER)s или больше символов в верхнем регистре"
-msgstr "should contain% %(UPPER)s or more uppercase letters"
+msgstr "should contain %(UPPER)s or more uppercase letters"
 
 
 msgid "должен содержать %(LOWER)s или больше символов в нижнем регистре"
-msgstr "should contain% %(LOWER)s or more lowercase characters"
+msgstr "should contain %(LOWER)s or more lowercase characters"
 
 
 msgid "должен содержать %(DIGITS)s или больше цифр"
-msgstr "should contain% %(DIGITS)s or more digits"
+msgstr "should contain %(DIGITS)s or more digits"
 
 
 msgid "должен содержать %(PUNCTUATION)s или больше символов пунктуации"
-msgstr "should contain% %(PUNCTUATION)s or more punctuation"
+msgstr "should contain %(PUNCTUATION)s or more punctuation"
 
 
 msgid "должен содержать %(NON ASCII)s или больше не ASCII символов"
-msgstr "should contain% %(NON ASCII)s or more non-ASCII characters"
+msgstr "should contain %(NON ASCII)s or more non-ASCII characters"
 
 
 msgid "должен содержать %(WORDS)s или больше уникальных слов"
-msgstr "should contain% %(WORDS)s or more unique words"
+msgstr "should contain %(WORDS)s or more unique words"
 
 
 msgid "Очень похоже на [%(haystacks)s]"
