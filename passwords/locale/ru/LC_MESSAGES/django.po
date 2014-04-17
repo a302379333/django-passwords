@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-08 10:40+0000\n"
+"PO-Revision-Date: 2014-04-08 14:18+0700\n"
+"Last-Translator: Alexander Panov <a.panov@dinect.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+
+
+msgid "Пароль должен содержать от %(MIN)s до %(MAX)s символов, включая числа, заглавную и строчные буквы"
+msgstr ""
+
+
+msgid "Неверная длина (%s)"
+msgstr ""
+
+
+msgid "должен содержать символов, не менее %s"
+msgstr ""
+
+
+msgid "должен содержать символов, не более %s"
+msgstr ""
+
+
+msgid "Должен быть более сложным (%s)"
+msgstr ""
+
+
+msgid "должен содержать %(UPPER)s или больше символов в верхнем регистре"
+msgstr ""
+
+
+msgid "должен содержать %(LOWER)s или больше символов в нижнем регистре"
+msgstr ""
+
+
+msgid "должен содержать %(DIGITS)s или больше цифр"
+msgstr ""
+
+
+msgid "должен содержать %(PUNCTUATION)s или больше символов пунктуации"
+msgstr ""
+
+
+msgid "должен содержать %(NON ASCII)s или больше не ASCII символов"
+msgstr ""
+
+
+msgid "должен содержать %(WORDS)s или больше уникальных слов"
+msgstr ""
+
+
+msgid "Очень похоже на [%(haystacks)s]"
+msgstr ""
+
+
+msgid "Похоже на слово из словаря плохих паролей"
+msgstr ""
+
+
+msgid "Похоже на часто используемый пароль"
+msgstr ""

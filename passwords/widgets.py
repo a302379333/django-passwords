@@ -3,6 +3,8 @@ from django.forms import PasswordInput
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext as _
 
+from project.settings import PASSWORD_MIN_LENGTH, PASSWORD_MAX_LENGTH
+
 
 class PasswordFieldWidget(PasswordInput):
     class Media:
@@ -23,7 +25,7 @@ class PasswordFieldWidget(PasswordInput):
                             <p class="help-block">{message}</p>
             <script type="text/javascript">//global var for password validation url
                 window.password_validator_url = '{url}';
-            </script>""".format(message=_(u'Пароль должен содержать от 6 до 20 символов, включая числа, заглавную и строчные буквы'), url=self.validate_url)
+            </script>""".format(message=_(u'Пароль должен содержать от %(MIN)s до %(MAX)s символов, включая числа, заглавную и строчные буквы') % {'MIN': PASSWORD_MIN_LENGTH, 'MAX': PASSWORD_MAX_LENGTH}, url=self.validate_url)
         else:
             data_render = '<div>Укажите урл для валидации поля</div>'
         return mark_safe(str(super(PasswordFieldWidget, self).render(name, value, attrs)) + data_render)

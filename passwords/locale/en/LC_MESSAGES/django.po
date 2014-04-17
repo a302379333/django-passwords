@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-08 10:40+0000\n"
+"PO-Revision-Date: 2013-10-18 10:33+0700\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+
+
+msgid "Пароль должен содержать от %(MIN)s до %(MAX)s символов, включая числа, заглавную и строчные буквы"
+msgstr "The password must be between %(MIN)s and %(MAX)s characters, including numbers, uppercase and lowercase letters"
+
+
+msgid "Неверная длина (%s)"
+msgstr "Invalid length (%s)"
+
+
+msgid "должен содержать символов, не менее %s"
+msgstr "must contain characters not less than %s"
+
+
+msgid "должен содержать символов, не более %s"
+msgstr "must contain characters that are not more than %s"
+
+
+msgid "Должен быть более сложным (%s)"
+msgstr "Be more complicated (%s)"
+
+
+msgid "должен содержать %(UPPER)s или больше символов в верхнем регистре"
+msgstr "should contain% %(UPPER)s or more uppercase letters"
+
+
+msgid "должен содержать %(LOWER)s или больше символов в нижнем регистре"
+msgstr "should contain% %(LOWER)s or more lowercase characters"
+
+
+msgid "должен содержать %(DIGITS)s или больше цифр"
+msgstr "should contain% %(DIGITS)s or more digits"
+
+
+msgid "должен содержать %(PUNCTUATION)s или больше символов пунктуации"
+msgstr "should contain% %(PUNCTUATION)s or more punctuation"
+
+
+msgid "должен содержать %(NON ASCII)s или больше не ASCII символов"
+msgstr "should contain% %(NON ASCII)s or more non-ASCII characters"
+
+
+msgid "должен содержать %(WORDS)s или больше уникальных слов"
+msgstr "should contain% %(WORDS)s or more unique words"
+
+
+msgid "Очень похоже на [%(haystacks)s]"
+msgstr "Very similar to the [%(haystacks)s]"
+
+
+msgid "Похоже на слово из словаря плохих паролей"
+msgstr "Sounds like a word from the dictionary of bad passwords"
+
+
+msgid "Похоже на часто используемый пароль"
+msgstr "Similar to commonly used password"
