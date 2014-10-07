@@ -68,8 +68,9 @@ To use the formfield simply import it and use it::
             password = PasswordField(label="Password", validate_url=reverse_lazy('password_validator'))
 
     
-You also need to add the url to the base application url.py
-    # urls.py base file
-    urlpatterns = patterns('',
-        url(r'^your_any_url/', include('passwords.urls')),
-    )
+You also need to add the url to the base application url.py::
+
+        # urls.py base file
+        urlpatterns = patterns('',
+                url(r'^your_any_url/', include('passwords.urls')),
+        )
