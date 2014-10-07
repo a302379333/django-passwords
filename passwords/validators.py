@@ -156,7 +156,17 @@ class CommonSequenceValidator(BaseSimilarityValidator):
     message = _(u"Похоже на часто используемый пароль")
     code = "common_sequence"
 
+
+class OnlyANSISymbols:
+    """Check only ansi symbols
+    """
+    message = _(u'Буквы могут быть только латинскими')
+    def __call__(self, value):
+        if not all(ord(c) < 128 for c in value):
+            raise ValidationError(self.message)
+
 validate_length = LengthValidator(PASSWORD_MIN_LENGTH, PASSWORD_MAX_LENGTH)
 complexity = ComplexityValidator(PASSWORD_COMPLEXITY)
 dictionary_words = DictionaryValidator(dictionary=PASSWORD_DICTIONARY)
 common_sequences = CommonSequenceValidator(PASSWORD_COMMON_SEQUENCES)
+only_ansi_symbols = OnlyANSISymbols()

@@ -3,7 +3,9 @@ import json
 from django.http import HttpResponse
 from django.core.exceptions import ValidationError
 
-from passwords.validators import validate_length, common_sequences, dictionary_words, complexity
+from passwords.validators import (validate_length, common_sequences,
+                                  dictionary_words, complexity,
+                                  only_ansi_symbols)
 
 from project.settings import PASSWORD_MAX_LENGTH
 
@@ -22,6 +24,7 @@ def password_validator(request):
                 'error_messages': '',
                 'width': bar_width}
     try:
+        only_ansi_symbols(request.POST.get('password'))
         complexity(request.POST.get('password'))
         dictionary_words(request.POST.get('password'))
         validate_length(request.POST.get('password'))
