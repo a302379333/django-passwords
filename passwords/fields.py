@@ -1,11 +1,19 @@
 from django.forms import CharField, PasswordInput
 
-from passwords.validators import validate_length, common_sequences, dictionary_words, complexity
+from passwords.validators import (validate_length,
+                                  common_sequences,
+                                  dictionary_words,
+                                  complexity,
+                                  only_ansi_symbols)
 from widgets import PasswordFieldWidget
 
 
 class PasswordField(CharField):
-    default_validators = [validate_length, common_sequences, dictionary_words, complexity]
+    default_validators = [validate_length,
+                          common_sequences,
+                          dictionary_words,
+                          complexity,
+                          only_ansi_symbols]
 
     def __init__(self, *args, **kwargs):
         if not kwargs.has_key("widget"):
