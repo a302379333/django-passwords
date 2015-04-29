@@ -1,6 +1,7 @@
 # coding: utf-8
 from __future__ import division
 import string
+import re
 
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
@@ -24,8 +25,21 @@ PASSWORD_MIN_LENGTH = getattr(settings, "PASSWORD_MIN_LENGTH", 6)
 PASSWORD_MAX_LENGTH = getattr(settings, "PASSWORD_MAX_LENGTH", None)
 PASSWORD_DICTIONARY = getattr(settings, "PASSWORD_DICTIONARY", None)
 PASSWORD_MATCH_THRESHOLD = getattr(settings, "PASSWORD_MATCH_THRESHOLD", 0.9)
-PASSWORD_COMMON_SEQUENCES =  getattr(settings, "PASSWORD_COMMON_SEQUENCES", COMMON_SEQUENCES)
+PASSWORD_COMMON_SEQUENCES = getattr(settings, "PASSWORD_COMMON_SEQUENCES", COMMON_SEQUENCES)
 PASSWORD_COMPLEXITY = getattr(settings, "PASSWORD_COMPLEXITY", None)
+
+
+class WhiteSpaceValidator(object):
+    message = _(u"Пароль не должен содержать пробельных символов")
+    code = "whitespace"
+
+    def __init__(self):
+        self.whitespaces = re.compile(r'\s')
+
+    def __call__(self, value):
+        if re.search(self.whitespaces, value):
+            raise ValidationError(_(u"Пароль не должен содержать пробельных символов"))
+
 
 class LengthValidator(object):
     message = _(u"Неверная длина (%s)")
@@ -44,6 +58,7 @@ class LengthValidator(object):
             raise ValidationError(
                 self.message % _(u"должен содержать символов, не более %s") % self.max_length,
                 code=self.code)
+
 
 class ComplexityValidator(object):
     message = _(u"Должен быть более сложным (%s)")
@@ -136,6 +151,7 @@ class BaseSimilarityValidator(object):
                     self.message % {"haystacks": ", ".join(self.haystacks)},
                     code=self.code)
 
+
 class DictionaryValidator(BaseSimilarityValidator):
     message = _(u"Похоже на слово из словаря плохих паролей")
     code = "dictionary_word"
@@ -161,6 +177,7 @@ class OnlyANSISymbols:
     """Check only ansi symbols
     """
     message = _(u'Буквы могут быть только латинскими')
+
     def __call__(self, value):
         if not all(ord(c) < 128 for c in value):
             raise ValidationError(self.message)
@@ -170,3 +187,4 @@ complexity = ComplexityValidator(PASSWORD_COMPLEXITY)
 dictionary_words = DictionaryValidator(dictionary=PASSWORD_DICTIONARY)
 common_sequences = CommonSequenceValidator(PASSWORD_COMMON_SEQUENCES)
 only_ansi_symbols = OnlyANSISymbols()
+validate_whitespaces = WhiteSpaceValidator()
