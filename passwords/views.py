@@ -11,7 +11,7 @@ from passwords.validators import (validate_length, common_sequences,
 from project.settings import PASSWORD_MAX_LENGTH
 
 
-# ignore whitespaces
+# ignore whitespaces: if True - check whitespaces
 PASSWORD_WITHOUT_WHITESPACES = getattr(settings, 'PASSWORD_WITHOUT_WHITESPACES', False)
 
 

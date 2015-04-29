@@ -4,7 +4,8 @@ from passwords.validators import (validate_length,
                                   common_sequences,
                                   dictionary_words,
                                   complexity,
-                                  only_ansi_symbols)
+                                  only_ansi_symbols,
+                                  validate_whitespaces)
 from widgets import PasswordFieldWidget
 
 
@@ -13,7 +14,8 @@ class PasswordField(CharField):
                           common_sequences,
                           dictionary_words,
                           complexity,
-                          only_ansi_symbols]
+                          only_ansi_symbols,
+                          validate_whitespaces]
 
     def __init__(self, *args, **kwargs):
         if not kwargs.has_key("widget"):
