@@ -38,7 +38,7 @@ class WhiteSpaceValidator(object):
 
     def __call__(self, value):
         if re.search(self.whitespaces, value):
-            raise ValidationError(_(u"Пароль не должен содержать пробельных символов"))
+            raise ValidationError(self.message)
 
 
 class LengthValidator(object):
