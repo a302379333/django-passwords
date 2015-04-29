@@ -25,6 +25,10 @@ Settings
 django-passwords adds 6 optional settings
 
 Optional:
+    Specifies that no space characters in the password (default False)::
+
+        PASSWORD_WITHOUT_WHITESPACES = True
+
     Specifies minimum length for passwords::
 
         PASSWORD_MIN_LENGTH = 6 # Defaults to 6
@@ -67,7 +71,7 @@ To use the formfield simply import it and use it::
         class ExampleForm(forms.Form):
             password = PasswordField(label="Password", validate_url=reverse_lazy('password_validator'))
 
-    
+
 You also need to add the url to the base application url.py::
 
         # urls.py base file
