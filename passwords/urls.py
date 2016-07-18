@@ -1,7 +1,11 @@
 # coding: utf-8
-from django.conf.urls import patterns, url
+from __future__ import (absolute_import, division, print_function,
+                        unicode_literals)
 
+from django.conf.urls import  url
 
-urlpatterns = patterns('',
-    url(r'password_validator/$', 'passwords.views.password_validator', name='password_validator'),
-)
+from .views import password_validator
+
+urlpatterns = [
+    url(r'password_validator/$', password_validator, name='password_validator'),
+]
