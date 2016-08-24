@@ -42,4 +42,4 @@ def password_validator(request):
                   'error_messages': err.messages[0],
                   'width': bar_width,
                   'bar_type': 'progress-danger'}
-    return HttpResponse(json.dumps(result), mimetype='application/json')
+    return HttpResponse(json.dumps(result), content_type='application/json')
